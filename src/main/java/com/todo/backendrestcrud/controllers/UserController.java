@@ -41,6 +41,12 @@ public class UserController {
     @Autowired
     private UserService userService;
     private MultipartFile file;
+
+    //sayHello to test starting
+    @GetMapping("sayhello")
+    public ResponseEntity<String> sayHello(){
+        return ResponseEntity.ok("hello");
+    }
     //signup
     @PostMapping("/signup")
     public ResponseEntity<Map<String, String>> signUp(@RequestBody User user) {
